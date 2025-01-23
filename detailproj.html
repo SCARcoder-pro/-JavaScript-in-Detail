@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Examples</title>
+</head>
+
+<body>
+    <h2>Arrow Functions in JavaScript</h2>
+    <p>This example shows an Arrow Function with a parameter</p>
+    <p id="arrowFunctionResult"></p>
+
+    <h2>Error Handling in JavaScript</h2>
+    <p>This example demonstrates how to handle JavaScript errors</p>
+    <p id="error_message"></p>
+
+    <h2>Convert, Search and Replace String</h2>
+    <p>Search a string for "doing", display the position of the match, and replace the word "how are" with "how are you"
+    </p>
+    <p id="search_result"></p>
+    <p id="replace_result"></p>
+    <p id="string_result"></p>
+
+    <script>
+        const add = (a, b) => a + b;
+        document.getElementById("arrowFunctionResult").innerHTML = "The result of the arrow function is: " + add(4, 6);
+
+        try {
+            addalert("Welcome guest!");
+        } catch (err) {
+            document.getElementById("error_message").innerHTML = "Error: " + err.message;
+        }
+
+
+        var str = "Hello, how are doing for the day";
+        var search_position = str.search("doing");
+        var replaced_str = str.replace("how are", "how are you");
+        var x = 70;
+        var y = 90;
+
+        document.getElementById("search_result").innerHTML = "Position of 'doing': " + search_position;
+        document.getElementById("replace_result").innerHTML = "Replaced string: " + replaced_str;
+        document.getElementById("string_result").innerHTML = "Concatenated numbers: " + String(x) + String(y);
+    </script>
+</body>
+
+</html>
